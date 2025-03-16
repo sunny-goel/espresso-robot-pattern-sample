@@ -2,18 +2,19 @@ package com.example.espressorobot
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
-import kotlinx.android.synthetic.main.activity_profile.*
+import android.widget.Button
 
-/**
- * Created by ftoptas on 20/12/17.
- */
 class ProfileActivity : AppCompatActivity() {
+
+    private lateinit var btnSettings: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
+        btnSettings = findViewById(R.id.btnSettings)
 
         btnSettings.setOnClickListener { startActivity(Intent(this, SettingsActivity::class.java)) }
 

@@ -1,13 +1,12 @@
 package com.example.espressorobot
 
-import android.support.test.espresso.Espresso.onData
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.ViewInteraction
-import android.support.test.espresso.action.ViewActions
-import android.support.test.espresso.assertion.ViewAssertions
-import android.support.test.espresso.matcher.ViewMatchers
-import android.support.test.espresso.matcher.ViewMatchers.withId
-import com.jraska.falcon.FalconSpoonRule
+import androidx.test.espresso.Espresso.onData
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.ViewInteraction
+import androidx.test.espresso.action.ViewActions
+import androidx.test.espresso.assertion.ViewAssertions
+import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.withId
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.Matchers.anything
 
@@ -37,10 +36,4 @@ open class BaseTestRobot {
     fun sleep() = apply {
         Thread.sleep(500)
     }
-
-    fun screenShot(rule: FalconSpoonRule, tag: String) {
-        sleep()
-        TestUtils.screenShot(rule, tag)
-    }
-
 }

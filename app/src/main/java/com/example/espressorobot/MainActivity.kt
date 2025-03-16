@@ -2,20 +2,27 @@ package com.example.espressorobot
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
+import android.widget.EditText
 
 class MainActivity : AppCompatActivity(), LoginView {
 
     private val presenter = LoginPresenter(this)
+    private lateinit var btnLogin: Button
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnLogin.setOnClickListener({ login() })
+        btnLogin = findViewById(R.id.btnLogin)
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+
+        btnLogin.setOnClickListener { login() }
     }
 
     private fun login() {
@@ -38,8 +45,8 @@ class MainActivity : AppCompatActivity(), LoginView {
     private fun showError(msg: Int) {
         val builder = AlertDialog.Builder(this)
         builder
-                .setMessage(msg)
-                .setPositiveButton(R.string.ok, null)
-                .show()
+            .setMessage(msg)
+            .setPositiveButton(R.string.ok, null)
+            .show()
     }
 }

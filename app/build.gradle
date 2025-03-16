@@ -1,51 +1,42 @@
 buildscript {
     repositories {
-        jcenter()
         mavenCentral()
+        google()  // Add this to ensure dependencies resolve correctly
+
     }
 }
 
-apply plugin: 'com.android.application'
 
+apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
-
-apply plugin: "com.jaredsburrows.spoon"
-
-
-
-
-
 android {
+    viewBinding {
+        enabled = true
+    }
+    compileSdkVersion 34
+    namespace "com.example.espressorobot"  // <-- Add this line
 
-    spoon {
-        // for debug output
-        debug = true
-
-        // To run a single test class
-        //className = 'com.example.espressorobot.DenemeTest'
-
-        // To run a single method in TestCase
-        //methodName = 'testMyApp'
-
-        // To execute the tests device by device */
-        //sequential = true
-
-        // To grant permissions to Android M >= devices */
-        //grantAllPermissions = true
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    compileSdkVersion 27
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     defaultConfig {
         applicationId "com.example.espressorobot"
-        minSdkVersion 16
-        targetSdkVersion 27
-        buildToolsVersion "27.0.3"
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildToolsVersion "34.0.0"
 
     buildTypes {
         release {
@@ -59,15 +50,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.jraska:falcon:2.1.0'
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    androidTestImplementation "com.squareup.spoon:spoon-client:2.0.0-SNAPSHOT"
-    androidTestImplementation 'com.jraska:falcon-spoon-compat:2.1.0'
+    // Ensure Kotlin version is set properly
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
+    // AndroidX and Testing Libraries
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    // JUnit
+    testImplementation 'junit:junit:4.13.2'
 
 }

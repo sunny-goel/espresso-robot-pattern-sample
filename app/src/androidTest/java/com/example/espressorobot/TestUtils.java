@@ -1,12 +1,10 @@
 package com.example.espressorobot;
 
 import android.app.Activity;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
-import android.support.test.runner.lifecycle.Stage;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
+import androidx.test.runner.lifecycle.Stage;
 import android.util.Log;
-
-import com.jraska.falcon.FalconSpoonRule;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -28,10 +26,5 @@ public class TestUtils {
         });
 
         return currentActivity[0];
-    }
-
-    public static void screenShot(FalconSpoonRule rule, String tag) {
-        rule.screenshot(getCurrentActivity(), tag);
-        Log.i("asd", "Screenshot taken: " + tag);
     }
 }
