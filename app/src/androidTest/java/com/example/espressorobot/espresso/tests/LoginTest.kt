@@ -1,10 +1,10 @@
-package com.example.espressorobot.tests
+package com.example.espressorobot.espresso.tests
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
 import com.example.espressorobot.MainActivity
 import com.example.espressorobot.TestLogin
-import com.example.espressorobot.flows.LoginFlowTest
+import com.example.espressorobot.espresso.flows.LoginFlowTest
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

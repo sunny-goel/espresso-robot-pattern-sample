@@ -1,6 +1,6 @@
-package com.example.espressorobot.framework
+package com.example.espressorobot.espresso.framework
 
-import com.example.espressorobot.utils.ScreenRobot
+import com.example.espressorobot.espresso.utils.ScreenRobot
 
 inline fun <reified T> withRobot(noinline block: T.() -> Unit): T
         where T : ScreenRobot<T> {

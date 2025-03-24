@@ -1,4 +1,4 @@
-package com.example.espressorobot.utils
+package com.example.espressorobot.espresso.utils
 
 import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView

@@ -1,8 +1,8 @@
-package com.example.espressorobot.flows
+package com.example.espressorobot.espresso.flows
 
 import com.example.espressorobot.R
-import com.example.espressorobot.robots.LoginRobot
-import com.example.espressorobot.framework.withRobot
+import com.example.espressorobot.espresso.robots.LoginRobot
+import com.example.espressorobot.espresso.framework.withRobot
 
 abstract class LoginFlowTest: BaseFlowTest() {
 

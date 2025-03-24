@@ -1,7 +1,7 @@
-package com.example.espressorobot.utils
+package com.example.espressorobot.espresso.utils
 
-import com.example.espressorobot.robots.LoginRobot
-import com.example.espressorobot.framework.withRobot
+import com.example.espressorobot.espresso.robots.LoginRobot
+import com.example.espressorobot.espresso.framework.withRobot
 
 class OnboardingUtils: ScreenRobot<OnboardingUtils>() {
 

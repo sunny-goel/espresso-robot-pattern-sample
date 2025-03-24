@@ -1,7 +1,7 @@
-package com.example.espressorobot.robots
+package com.example.espressorobot.espresso.robots
 
 import com.example.espressorobot.R
-import com.example.espressorobot.utils.ScreenRobot
+import com.example.espressorobot.espresso.utils.ScreenRobot
 
 fun login(func: LoginRobot.() -> Unit) = LoginRobot().apply { func() }
 

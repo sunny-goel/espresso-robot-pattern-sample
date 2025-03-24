@@ -1,8 +1,8 @@
-package com.example.espressorobot.flows
+package com.example.espressorobot.espresso.flows
 
-import com.example.espressorobot.robots.ProfileRobot
-import com.example.espressorobot.framework.withRobot
-import com.example.espressorobot.utils.OnboardingUtils
+import com.example.espressorobot.espresso.robots.ProfileRobot
+import com.example.espressorobot.espresso.framework.withRobot
+import com.example.espressorobot.espresso.utils.OnboardingUtils
 
 abstract class ProfileFlowTest: BaseFlowTest() {
 

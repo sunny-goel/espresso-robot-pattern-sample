@@ -1,4 +1,4 @@
-package com.example.espressorobot.flows
+package com.example.espressorobot.espresso.flows
 
 import androidx.test.rule.ActivityTestRule
 import com.example.espressorobot.MainActivity
