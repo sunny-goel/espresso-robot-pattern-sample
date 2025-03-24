@@ -2,7 +2,7 @@ package com.example.espressorobot
 
 import android.os.Bundle
 import android.preference.PreferenceFragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Created by ftoptas on 20/12/17.

@@ -1,7 +1,7 @@
 package com.example.espressorobot
 
 import android.content.Context
-import android.support.test.espresso.ViewInteraction
+import androidx.test.espresso.ViewInteraction
 
 /**
  * Created by ftoptas on 20/12/17.
