@@ -1,15 +1,11 @@
-package com.example.espressorobot
+package com.example.espressorobot.espresso.robots
 
-import android.content.Context
-import androidx.test.espresso.ViewInteraction
-
-/**
- * Created by ftoptas on 20/12/17.
- */
+import com.example.espressorobot.R
+import com.example.espressorobot.espresso.utils.ScreenRobot
 
 fun login(func: LoginRobot.() -> Unit) = LoginRobot().apply { func() }
 
-class LoginRobot : BaseTestRobot() {
+class LoginRobot : ScreenRobot<LoginRobot>() {
 
     fun setEmail(email: String) = fillEditText(R.id.etEmail, email);
 
