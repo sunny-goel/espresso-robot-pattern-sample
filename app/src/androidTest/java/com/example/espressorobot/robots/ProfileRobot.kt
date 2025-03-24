@@ -1,9 +1,12 @@
-package com.example.espressorobot
+package com.example.espressorobot.robots
+
+import com.example.espressorobot.R
+import com.example.espressorobot.utils.ScreenRobot
 
 
 fun profile(func: ProfileRobot.() -> Unit) = ProfileRobot().apply { func() }
 
-class ProfileRobot : BaseTestRobot() {
+class ProfileRobot : ScreenRobot<ProfileRobot>() {
 
     fun clickSettings() = clickButton(R.id.btnSettings)
 

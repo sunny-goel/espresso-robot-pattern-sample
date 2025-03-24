@@ -1,4 +1,4 @@
-package com.example.espressorobot
+package com.example.espressorobot.utils
 
 import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
@@ -10,10 +10,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.Matchers.anything
 
-/**
- * Created by ftoptas on 21/12/17.
- */
-open class BaseTestRobot {
+abstract class ScreenRobot<T : ScreenRobot<T>> {
 
     fun fillEditText(resId: Int, text: String): ViewInteraction =
             onView(withId(resId)).perform(ViewActions.replaceText(text), ViewActions.closeSoftKeyboard())
